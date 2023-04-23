@@ -52,6 +52,7 @@ export const ImageUploader = ({
   const uploadImage = (e) => {
     isLoading(true);
     const imageFile = e.target.files[0];
+    
     const storageRef = ref(
       storage,
       `${isImage ? "Images" : "Audio"}/${Date.now()}-${imageFile.name}`
@@ -255,7 +256,7 @@ const DashboardNewSong = () => {
         <div className="flex flex-col items-center justify-center gap-4">
           <input
             type="text"
-            placeholder="Type your song name"
+            placeholder="Type your podcast name"
             className="w-full p-3 rounded-md text-base font-semibold text-textColor outline-none shadow-sm border border-gray-300 bg-transparent"
             value={songName}
             onChange={(e) => setSongName(e.target.value)}

@@ -29,7 +29,7 @@ const Header = () => {
   return (
     <header className="flex items-center w-full p-4 md:py-2 md:px-6">
       <NavLink to={"/"}>
-        <img src={Logo} className="w-16" alt="" />
+        <img src={Logo} className="w-16" alt="" />Podverse
       </NavLink>
 
       <ul className="flex items-center justify-center ml-7">
@@ -52,7 +52,7 @@ const Header = () => {
           className="w-12 min-w-[44px] object-cover rounded-full shadow-lg"
           src={user?.user?.imageURL}
           alt=""
-          referrerpolicy="no-referrer"
+          referrerPolicy="no-referrer"
         />
         <div className="flex flex-col">
           <p className="text-textColor text-lg hover:text-headingColor font-semibold">
