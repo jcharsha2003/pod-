@@ -32,3 +32,6 @@ please create below folders in firebase so the the audio and image are stored an
 firebase : We used storage in firebase , Create two folders for storing video and images Folder name:
 1.	Image
 2.	Audio
+
+if u want to use my website follow above thing mainly after signin go to mongodb and change the user role member to admin so that you can see your audio and video by clicking dashboard until u change your role ones you are admin then after any user like u use other account user google sign in u can see author name but after sign out the admin mail id can see the users and you can delete the user or also u can make him as admin and he can also access the dashboard on top right corner after clicking on our user profile.
+
