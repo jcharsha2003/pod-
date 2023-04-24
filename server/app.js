@@ -1,4 +1,6 @@
 const express = require("express");
+const videoRoutes=require("./routes/videos");
+
 const app = express();
 require("dotenv/config");
 const cors = require("cors");
@@ -23,6 +25,11 @@ app.use("/api/albums/", albumRoute);
 const songRoute = require("./routes/songs");
 app.use("/api/songs/", songRoute);
 
+
+
+app.use("/api/videos", videoRoutes)
+
+
 // If any depreciation warning add depreciation options
 // mongoose.connect(process.env.DB_STRING, { useNewUrlParser: true }, () => {
 //   console.log("Mongodb Connected");
@@ -35,4 +42,17 @@ mongoose.connection
     console.log(`Error : ${error}`);
   });
 
+// error handler
+  app.use((err, req, res, next) => {
+    const status = err.status || 500;
+    const message = err.message || "Something went wrong!";
+    return res.status(status).json({
+      success: false,
+      status,
+      message,
+    });
+  });
+
 app.listen(4000, () => console.log("lisitening to port 4000"));
+
+

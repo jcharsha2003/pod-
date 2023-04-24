@@ -9,6 +9,7 @@ import DashBoardHome from "./DashBoardHome";
 import DashboardSongs from "./DashboardSongs";
 import DashboardUser from "./DashboardUser";
 import Header from "./Header";
+import Index1 from "../index1"
 
 const Dashboard = () => {
   return (
@@ -29,6 +30,10 @@ const Dashboard = () => {
 
         {/* prettier-ignore */}
         <NavLink to={"/dashboard/albums"} className={({ isActive }) => isActive ? isActiveStyles : isNotActiveStyles }> Albums </NavLink>
+
+        
+        {/* prettier-ignore */}
+        <NavLink to={"/dashboard/videos"} className={({ isActive }) => isActive ? isActiveStyles : isNotActiveStyles }> Podcast Video </NavLink>
       </div>
 
       <div className="my-4 w-full p-4">
@@ -39,6 +44,7 @@ const Dashboard = () => {
           <Route path="/artist" element={<DashboardArtist />} />
           <Route path="/albums" element={<DashboardAlbum />} />
           <Route path="/newSong" element={<DashboardNewSong />} />
+          <Route path="/videos/*" element={<Index1 />} />
         </Routes>
       </div>
     </div>
