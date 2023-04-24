@@ -39,7 +39,7 @@ app.use("/api/videos", videoRoutes)
 //   console.log("Mongodb Connected");
 // });
 
-mongoose.connect(process.env.DB_STRING, { useNewUrlParser: true });
+mongoose.connect("mongodb+srv://admin:admin@cluster0.klhz4ln.mongodb.net/?retryWrites=true&w=majority", { useNewUrlParser: true });
 mongoose.connection
   .once("open", () => console.log("Connected"))
   .on("error", (error) => {
