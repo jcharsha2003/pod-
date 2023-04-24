@@ -2,6 +2,10 @@ const express = require("express");
 const videoRoutes=require("./routes/videos");
 
 const app = express();
+
+const path=require("path")
+app.use(express.static(path.join(__dirname,"../client/build")));
+
 require("dotenv/config");
 const cors = require("cors");
 const { default: mongoose } = require("mongoose");
